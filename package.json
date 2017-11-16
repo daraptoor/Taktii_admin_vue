@@ -1,8 +1,8 @@
 {
   "name": "Taktii",
   "version": "1.1.0",
-  "description": "A premium Vue.js admin dashboard for bootstrap. Coded by Cristi Jora, designed by Creative Tim.",
-  "author": "cristian.jora <cristian.jora@corebuild.eu>",
+  "description": "A taktii product",
+  "author": "daraptoor <daraptoor@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "cross-env ENABLE_ESLINT=true node build/dev-server.js",
