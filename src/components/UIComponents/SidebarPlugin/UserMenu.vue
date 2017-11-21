@@ -6,12 +6,12 @@
     <div class="info">
       <a data-toggle="collapse" @click="toggleMenu" href="javascript:void(0)">
            <span>
-             Chet Faker
-             <b class="caret"></b>
+             TAKTii   Admin
+             <!-- <b class="caret"></b> -->
           </span>
       </a>
       <div class="clearfix"></div>
-      <div>
+      <!-- <div>
         <el-collapse-transition>
           <ul class="nav" v-show="!isClosed">
             <li>
@@ -34,7 +34,7 @@
             </li>
           </ul>
         </el-collapse-transition>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

@@ -40,7 +40,7 @@
     props: {
       title: {
         type: String,
-        default: 'Paper Dashboard Pro'
+        default: 'TAKTii Control Panel'
       },
       type: {
         type: String,
@@ -68,7 +68,7 @@
       },
       logo: {
         type: String,
-        default: 'static/img/vue-logo.png'
+        default: 'static/img/taktii-logo.png'
       },
       sidebarLinks: {
         type: Array,

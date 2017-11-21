@@ -41,6 +41,11 @@ import Calendar from 'src/components/Dashboard/Views/Calendar/CalendarRoute.vue'
 // Charts
 import Charts from 'src/components/Dashboard/Views/Charts.vue'
 
+// Users
+import UsersData from 'src/components/Dashboard/Views/Users/PaginatedTeachers.vue'
+import StudentData from 'src/components/Dashboard/Views/Users/PaginatedStudents.vue'
+
+
 let componentsMenu = {
   path: '/components',
   component: DashboardLayout,
@@ -134,6 +139,23 @@ let tablesMenu = {
     }]
 }
 
+let usersMenu = {
+  path: '/users',
+  component: DashboardLayout,
+  redirect: '/users/teachers',
+  children: [
+    {
+      path: 'teachers',
+      name: 'Teachers Data',
+      component: UsersData
+    },
+    {
+      path: 'students',
+      name: 'Students Data',
+      component: StudentData
+    }]
+}
+
 let mapsMenu = {
   path: '/maps',
   component: DashboardLayout,
@@ -214,6 +236,7 @@ const routes = [
   componentsMenu,
   formsMenu,
   tablesMenu,
+  usersMenu,
   mapsMenu,
   pagesMenu,
   loginPage,
