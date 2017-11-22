@@ -219,7 +219,7 @@ const routes = [
   {
     path: '/',
     component: DashboardLayout,
-    redirect: '/admin/overview',
+    redirect: '/login',
     children: [
       {
         path: 'calendar',
