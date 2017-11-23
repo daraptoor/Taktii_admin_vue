@@ -75,14 +75,21 @@
 
   import {Table, TableColumn, Select, Option} from 'element-ui'
   import PPagination from 'src/components/UIComponents/Pagination.vue'
-  import users from './users'
 
+  // import users from './users'
+  // https://jsfiddle.net/usdhrcLa/32/
+  // https://jsfiddle.net/usdhrcLa/40/
+
+  let users
   Vue.use(VueAxios, axios)
   Vue.use(Table)
   Vue.use(TableColumn)
   Vue.use(Select)
   Vue.use(Option)
-
+  Vue.axios.get('https://taktii.com/api/index.php/mobile/teacher/list_teachers').then((response) => {
+    console.log(response.data)
+    users = response.data
+  })
   export default{
     components: {
       PPagination
