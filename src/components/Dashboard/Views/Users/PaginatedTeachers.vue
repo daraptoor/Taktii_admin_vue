@@ -68,14 +68,21 @@
   </div>
 </template>
 <script>
+
   import Vue from 'vue'
+  import axios from 'axios'
+  import VueAxios from 'vue-axios'
+
   import {Table, TableColumn, Select, Option} from 'element-ui'
   import PPagination from 'src/components/UIComponents/Pagination.vue'
   import users from './users'
+
+  Vue.use(VueAxios, axios)
   Vue.use(Table)
   Vue.use(TableColumn)
   Vue.use(Select)
   Vue.use(Option)
+
   export default{
     components: {
       PPagination
@@ -124,6 +131,12 @@
         return this.tableData.length
       }
     },
+    getData () {
+      Vue.axios.get('https://taktii.com/api/index.php/mobile/teacher/list_teachers').then((response) => {
+        console.log(response.data)
+        this.tableData = response.data
+      })
+    },
     data () {
       return {
         pagination: {
@@ -160,6 +173,7 @@
       }
     },
     methods: {
+
       handleLike (index, row) {
         alert(`Your want to like ${row.name}`)
       },
