@@ -138,12 +138,6 @@
         return this.tableData.length
       }
     },
-    getData () {
-      Vue.axios.get('https://taktii.com/api/index.php/mobile/teacher/list_teachers').then((response) => {
-        console.log(response.data)
-        this.tableData = response.data
-      })
-    },
     data () {
       return {
         pagination: {
